@@ -8,9 +8,9 @@
 
 <style>
 
-/* ================================
-   BASIC RESET
-================================ */
+/* =========================
+   RESET
+========================= */
 
 * {
     box-sizing: border-box;
@@ -26,25 +26,27 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     background:
-        radial-gradient(circle at 80% 10%, rgba(255, 166, 0, 0.18), transparent 25%),
-        radial-gradient(circle at 15% 35%, rgba(0, 140, 255, 0.15), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(255,166,0,0.18), transparent 25%),
+        radial-gradient(circle at 15% 35%, rgba(0,140,255,0.15), transparent 30%),
         linear-gradient(135deg, #030711, #081526 50%, #10091b);
     min-height: 100vh;
     line-height: 1.6;
 }
 
 
-/* ================================
+/* =========================
    NAVIGATION
-================================ */
+========================= */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background: rgba(3, 7, 17, 0.92);
+    z-index: 1000;
+
+    background: rgba(3,7,17,0.94);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 
     padding: 18px 6%;
 
@@ -66,8 +68,11 @@ nav {
 nav a {
     color: #ffffff;
     text-decoration: none;
+
     margin-left: 25px;
+
     font-size: 14px;
+
     transition: 0.3s;
 }
 
@@ -76,9 +81,9 @@ nav a:hover {
 }
 
 
-/* ================================
+/* =========================
    BUTTONS
-================================ */
+========================= */
 
 .button {
     display: inline-block;
@@ -86,11 +91,12 @@ nav a:hover {
     background: #ffb000;
     color: #111827;
 
-    padding: 14px 25px;
+    padding: 13px 22px;
 
     border-radius: 10px;
 
     text-decoration: none;
+
     font-weight: bold;
 
     transition: 0.3s;
@@ -98,17 +104,19 @@ nav a:hover {
 
 .button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(255, 176, 0, 0.25);
+
+    box-shadow:
+        0 10px 30px rgba(255,176,0,0.25);
 }
 
 .secondary-button {
     display: inline-block;
 
-    color: white;
+    color: #ffffff;
 
     border: 1px solid #475569;
 
-    padding: 13px 24px;
+    padding: 12px 22px;
 
     border-radius: 10px;
 
@@ -125,9 +133,9 @@ nav a:hover {
 }
 
 
-/* ================================
+/* =========================
    HERO
-================================ */
+========================= */
 
 .hero {
     min-height: 620px;
@@ -156,7 +164,7 @@ nav a:hover {
     background:
         radial-gradient(
             circle,
-            rgba(255, 174, 0, 0.2),
+            rgba(255,174,0,0.2),
             transparent 70%
         );
 
@@ -175,9 +183,9 @@ nav a:hover {
 
     color: #ffb000;
 
-    border: 1px solid rgba(255, 176, 0, 0.4);
+    border: 1px solid rgba(255,176,0,0.4);
 
-    background: rgba(255, 176, 0, 0.08);
+    background: rgba(255,176,0,0.08);
 
     padding: 8px 15px;
 
@@ -211,9 +219,9 @@ nav a:hover {
 }
 
 
-/* ================================
-   GENERAL SECTIONS
-================================ */
+/* =========================
+   SECTIONS
+========================= */
 
 section {
     padding: 75px 6%;
@@ -236,26 +244,26 @@ section {
 }
 
 
-/* ================================
+/* =========================
    CATEGORY CARDS
-================================ */
+========================= */
 
 .categories {
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-
     max-width: 1200px;
 
     margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
 }
 
 .card {
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15,23,42,0.75);
 
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255,255,255,0.09);
 
     border-radius: 18px;
 
@@ -267,10 +275,10 @@ section {
 .card:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(255, 176, 0, 0.5);
+    border-color: rgba(255,176,0,0.5);
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.3);
+        0 15px 40px rgba(0,0,0,0.3);
 }
 
 .icon {
@@ -290,9 +298,9 @@ section {
 }
 
 
-/* ================================
+/* =========================
    FEATURED PRODUCT
-================================ */
+========================= */
 
 .featured {
     max-width: 1200px;
@@ -302,12 +310,12 @@ section {
     background:
         radial-gradient(
             circle at 90% 20%,
-            rgba(255, 176, 0, 0.15),
+            rgba(255,176,0,0.15),
             transparent 35%
         ),
-        rgba(15, 23, 42, 0.85);
+        rgba(15,23,42,0.85);
 
-    border: 1px solid rgba(255, 176, 0, 0.35);
+    border: 1px solid rgba(255,176,0,0.35);
 
     border-radius: 24px;
 
@@ -358,7 +366,7 @@ section {
     background:
         radial-gradient(
             circle,
-            rgba(255, 176, 0, 0.2),
+            rgba(255,176,0,0.2),
             transparent 45%
         ),
         linear-gradient(
@@ -367,15 +375,15 @@ section {
             #020617
         );
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
 
     font-size: 120px;
 }
 
 
-/* ================================
+/* =========================
    PRODUCT GRID
-================================ */
+========================= */
 
 .product-grid {
     max-width: 1200px;
@@ -384,15 +392,15 @@ section {
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 
     gap: 22px;
 }
 
 .product-card {
-    background: rgba(15, 23, 42, 0.75);
+    background: rgba(15,23,42,0.78);
 
-    border: 1px solid rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255,255,255,0.09);
 
     border-radius: 18px;
 
@@ -408,10 +416,10 @@ section {
 .product-card:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(255, 176, 0, 0.5);
+    border-color: rgba(255,176,0,0.5);
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.3);
+        0 15px 40px rgba(0,0,0,0.3);
 }
 
 .product-image {
@@ -428,7 +436,7 @@ section {
     background:
         radial-gradient(
             circle,
-            rgba(255, 176, 0, 0.2),
+            rgba(255,176,0,0.2),
             transparent 55%
         ),
         linear-gradient(
@@ -439,18 +447,19 @@ section {
 
     font-size: 75px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
-.product-card h3 {
-   .product-badge {
+.product-badge {
     display: inline-block;
+
+    width: fit-content;
 
     color: #ffb000;
 
-    background: rgba(255, 176, 0, 0.10);
+    background: rgba(255,176,0,0.10);
 
-    border: 1px solid rgba(255, 176, 0, 0.25);
+    border: 1px solid rgba(255,176,0,0.25);
 
     padding: 5px 10px;
 
@@ -463,18 +472,32 @@ section {
     margin-bottom: 12px;
 }
 
-.rating {
-    font-size: 13px;
+.product-card h3 {
+    font-size: 20px;
 
+    margin-bottom: 10px;
+}
+
+.rating {
     color: #ffb000;
 
-    margin-bottom: 12px;
+    font-size: 13px;
+
+    margin-bottom: 10px;
 }
 
 .rating span {
     color: #94a3b8;
 
     margin-left: 5px;
+}
+
+.product-card p {
+    color: #94a3b8;
+
+    margin-bottom: 20px;
+
+    min-height: 70px;
 }
 
 .product-bottom {
@@ -490,19 +513,7 @@ section {
 .price {
     color: #ffffff;
 
-    font-size: 15px;
-}
-    font-size: 21px;
-
-    margin-bottom: 10px;
-}
-
-.product-card p {
-    color: #94a3b8;
-
-    margin-bottom: 20px;
-
-    min-height: 70px;
+    font-size: 14px;
 }
 
 .product-card .button {
@@ -510,15 +521,13 @@ section {
 
     padding: 11px 17px;
 
-    margin-top: auto;
-
-    align-self: flex-start;
+    text-align: center;
 }
 
 
-/* ================================
+/* =========================
    BENEFITS
-================================ */
+========================= */
 
 .benefits {
     max-width: 1100px;
@@ -527,7 +536,7 @@ section {
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 
     gap: 15px;
 }
@@ -537,11 +546,11 @@ section {
 
     padding: 25px 15px;
 
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(15,23,42,0.6);
 
     border-radius: 15px;
 
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .benefit strong {
@@ -557,9 +566,9 @@ section {
 }
 
 
-/* ================================
+/* =========================
    ABOUT
-================================ */
+========================= */
 
 .about {
     max-width: 1100px;
@@ -568,9 +577,9 @@ section {
 
     text-align: center;
 
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15,23,42,0.7);
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255,255,255,0.08);
 
     border-radius: 20px;
 
@@ -592,16 +601,16 @@ section {
 }
 
 
-/* ================================
+/* =========================
    FOOTER
-================================ */
+========================= */
 
 footer {
     padding: 50px 6%;
 
     text-align: center;
 
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255,255,255,0.08);
 
     color: #64748b;
 }
@@ -611,20 +620,25 @@ footer strong {
 }
 
 
-/* ================================
-   MOBILE
-================================ */
+/* =========================
+   TABLET
+========================= */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .benefits {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 }
+
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 800px) {
 
@@ -637,6 +651,8 @@ footer strong {
     }
 
     .hero {
+        min-height: 550px;
+
         padding: 70px 7%;
     }
 
@@ -674,6 +690,7 @@ footer strong {
 
         margin-top: 12px;
     }
+
 }
 
 </style>
@@ -683,9 +700,9 @@ footer strong {
 <body>
 
 
-<!-- ================================
+<!-- =========================
      NAVIGATION
-================================ -->
+========================= -->
 
 <nav>
 
@@ -697,26 +714,22 @@ footer strong {
 
         <a href="#home">Home</a>
 
-        <a href="#categories">
-            Categories
-        </a>
+        <a href="#categories">Categories</a>
 
-        <a href="#picks">
-            Picks
-        </a>
+        <a href="#featured">Featured</a>
 
-        <a href="#about">
-            About
-        </a>
+        <a href="#picks">Picks</a>
+
+        <a href="#about">About</a>
 
     </div>
 
 </nav>
 
 
-<!-- ================================
+<!-- =========================
      HERO
-================================ -->
+========================= -->
 
 <header class="hero" id="home">
 
@@ -756,9 +769,9 @@ footer strong {
 </header>
 
 
-<!-- ================================
+<!-- =========================
      CATEGORIES
-================================ -->
+========================= -->
 
 <section id="categories">
 
@@ -837,9 +850,9 @@ footer strong {
 </section>
 
 
-<!-- ================================
+<!-- =========================
      FEATURED PRODUCT
-================================ -->
+========================= -->
 
 <section id="featured">
 
@@ -885,9 +898,9 @@ footer strong {
 </section>
 
 
-<!-- ================================
+<!-- =========================
      MULLIN PICKS
-================================ -->
+========================= -->
 
 <section id="picks">
 
@@ -913,36 +926,43 @@ footer strong {
 
             <div class="product-image">
                 📱
-            <div class="product-badge">
-               ⭐ MULLIN PICK
             </div>
-   
+
+            <div class="product-badge">
+                ⭐ MULLIN PICK
+            </div>
+
             <h3>
                 Adjustable Phone Stand
             </h3>
 
             <div class="rating">
-               ⭐⭐⭐⭐⭐
-               <span>Great everyday accessory</span>
+                ⭐⭐⭐⭐⭐
+                <span>Popular desk accessory</span>
             </div>
 
             <p>
-                Keep your phone upright while watching
-                videos, making calls, or working at your desk.
+                Keep your phone upright while
+                watching videos, making calls,
+                or working at your desk.
             </p>
 
             <div class="product-bottom">
-               Check Latest Price
-            </strong>
-               
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=adjustable+phone+stand"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
+
+                <strong class="price">
+                    Check Latest Price
+                </strong>
+
+                <a
+                    class="button"
+                    href="https://www.amazon.com/s?k=adjustable+phone+stand"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Product →
+                </a>
+
+            </div>
 
         </div>
 
@@ -955,23 +975,40 @@ footer strong {
                 💡
             </div>
 
+            <div class="product-badge">
+                ⭐ MULLIN PICK
+            </div>
+
             <h3>
                 LED Desk Light
             </h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span>Workspace favorite</span>
+            </div>
 
             <p>
                 A simple lighting upgrade for
                 your desk or workspace.
             </p>
 
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=LED+desk+lamp"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
+            <div class="product-bottom">
+
+                <strong class="price">
+                    Check Latest Price
+                </strong>
+
+                <a
+                    class="button"
+                    href="https://www.amazon.com/s?k=LED+desk+lamp"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Product →
+                </a>
+
+            </div>
 
         </div>
 
@@ -984,23 +1021,40 @@ footer strong {
                 🎧
             </div>
 
+            <div class="product-badge">
+                ⭐ MULLIN PICK
+            </div>
+
             <h3>
                 Headphone Stand
             </h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span>Desk organization</span>
+            </div>
 
             <p>
                 A convenient way to keep
                 headphones organized on your desk.
             </p>
 
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=headphone+stand"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
+            <div class="product-bottom">
+
+                <strong class="price">
+                    Check Latest Price
+                </strong>
+
+                <a
+                    class="button"
+                    href="https://www.amazon.com/s?k=headphone+stand"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Product →
+                </a>
+
+            </div>
 
         </div>
 
@@ -1013,23 +1067,40 @@ footer strong {
                 🔌
             </div>
 
+            <div class="product-badge">
+                ⭐ MULLIN PICK
+            </div>
+
             <h3>
                 USB Hub
             </h3>
+
+            <div class="rating">
+                ⭐⭐⭐⭐⭐
+                <span>Useful computer accessory</span>
+            </div>
 
             <p>
                 Add extra USB ports when you
                 need more connections.
             </p>
 
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=USB+hub"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
+            <div class="product-bottom">
+
+                <strong class="price">
+                    Check Latest Price
+                </strong>
+
+                <a
+                    class="button"
+                    href="https://www.amazon.com/s?k=USB+hub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Product →
+                </a>
+
+            </div>
 
         </div>
 
@@ -1039,9 +1110,9 @@ footer strong {
 </section>
 
 
-<!-- ================================
+<!-- =========================
      BENEFITS
-================================ -->
+========================= -->
 
 <section>
 
@@ -1105,9 +1176,9 @@ footer strong {
 </section>
 
 
-<!-- ================================
+<!-- =========================
      ABOUT
-================================ -->
+========================= -->
 
 <section id="about">
 
@@ -1136,9 +1207,9 @@ footer strong {
 </section>
 
 
-<!-- ================================
+<!-- =========================
      FOOTER
-================================ -->
+========================= -->
 
 <footer>
 
