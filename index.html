@@ -7,444 +7,675 @@
 <title>Mullin Picks | Everyday Finds</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
 
-    html {
-        scroll-behavior: smooth;
-    }
+/* ================================
+   BASIC RESET
+================================ */
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: #ffffff;
-        background:
-            radial-gradient(circle at 80% 10%, rgba(255, 166, 0, 0.18), transparent 25%),
-            radial-gradient(circle at 15% 35%, rgba(0, 140, 255, 0.15), transparent 30%),
-            linear-gradient(135deg, #030711, #081526 50%, #10091b);
-        min-height: 100vh;
-        line-height: 1.6;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    /* NAVIGATION */
+html {
+    scroll-behavior: smooth;
+}
 
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        background: rgba(3, 7, 17, 0.92);
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        padding: 18px 6%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background:
+        radial-gradient(circle at 80% 10%, rgba(255, 166, 0, 0.18), transparent 25%),
+        radial-gradient(circle at 15% 35%, rgba(0, 140, 255, 0.15), transparent 30%),
+        linear-gradient(135deg, #030711, #081526 50%, #10091b);
+    min-height: 100vh;
+    line-height: 1.6;
+}
 
-    .logo {
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        color: #ffffff;
-    }
 
-    .logo span {
-        color: #ffb000;
-    }
+/* ================================
+   NAVIGATION
+================================ */
 
-    nav a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-left: 25px;
-        font-size: 14px;
-        transition: 0.3s;
-    }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(3, 7, 17, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    nav a:hover {
-        color: #ffb000;
-    }
+    padding: 18px 6%;
 
-    /* HERO */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .hero {
-        min-height: 620px;
-        padding: 90px 8%;
-        display: flex;
-        align-items: center;
-        position: relative;
-        overflow: hidden;
-    }
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
 
-    .hero::before {
-        content: "";
-        position: absolute;
-        width: 500px;
-        height: 500px;
-        right: -150px;
-        top: -100px;
-        background: radial-gradient(circle, rgba(255, 174, 0, 0.2), transparent 70%);
-        pointer-events: none;
-    }
+.logo span {
+    color: #ffb000;
+}
 
-    .hero-content {
-        max-width: 700px;
-        position: relative;
-        z-index: 2;
-    }
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: 0.3s;
+}
 
-    .tag {
-        display: inline-block;
-        color: #ffb000;
-        border: 1px solid rgba(255, 176, 0, 0.4);
-        background: rgba(255, 176, 0, 0.08);
-        padding: 8px 15px;
-        border-radius: 30px;
-        font-size: 13px;
-        margin-bottom: 20px;
-    }
+nav a:hover {
+    color: #ffb000;
+}
 
-    .hero h1 {
-        font-size: clamp(48px, 7vw, 82px);
-        line-height: 1;
-        margin-bottom: 25px;
-    }
 
-    .hero h1 span {
-        color: #ffb000;
-    }
+/* ================================
+   BUTTONS
+================================ */
 
-    .hero p {
-        color: #cbd5e1;
-        font-size: 20px;
-        max-width: 650px;
-        margin-bottom: 30px;
-    }
+.button {
+    display: inline-block;
 
-    .button {
-        display: inline-block;
-        background: #ffb000;
-        color: #111827;
-        padding: 14px 25px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+    background: #ffb000;
+    color: #111827;
 
-    .button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(255, 176, 0, 0.25);
-    }
+    padding: 14px 25px;
 
-    .secondary-button {
-        display: inline-block;
-        color: white;
-        border: 1px solid #475569;
-        padding: 13px 24px;
-        border-radius: 10px;
-        text-decoration: none;
-        margin-left: 10px;
-        transition: 0.3s;
-    }
+    border-radius: 10px;
 
-    .secondary-button:hover {
-        border-color: #ffb000;
-        color: #ffb000;
-    }
+    text-decoration: none;
+    font-weight: bold;
 
-    /* SECTIONS */
+    transition: 0.3s;
+}
 
-    section {
-        padding: 75px 6%;
-    }
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(255, 176, 0, 0.25);
+}
 
-    .section-title {
-        text-align: center;
-        margin-bottom: 45px;
-    }
+.secondary-button {
+    display: inline-block;
 
-    .section-title h2 {
-        font-size: 38px;
-        margin-bottom: 10px;
-    }
+    color: white;
 
-    .section-title p {
-        color: #94a3b8;
-    }
+    border: 1px solid #475569;
 
-    /* CATEGORY CARDS */
+    padding: 13px 24px;
 
-    .categories {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-        max-width: 1200px;
-        margin: auto;
-    }
+    border-radius: 10px;
 
-    .card {
-        background: rgba(15, 23, 42, 0.75);
-        border: 1px solid rgba(255, 255, 255, 0.09);
-        border-radius: 18px;
-        padding: 30px;
-        transition: 0.3s;
-    }
+    text-decoration: none;
 
-    .card:hover {
-        transform: translateY(-7px);
-        border-color: rgba(255, 176, 0, 0.5);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
+    margin-left: 10px;
 
-    .icon {
-        font-size: 38px;
-        margin-bottom: 15px;
-    }
+    transition: 0.3s;
+}
 
-    .card h3 {
-        font-size: 23px;
-        margin-bottom: 12px;
-    }
+.secondary-button:hover {
+    border-color: #ffb000;
+    color: #ffb000;
+}
 
-    .card p {
-        color: #94a3b8;
-    }
 
-    /* FEATURED PRODUCT */
+/* ================================
+   HERO
+================================ */
 
-    .product-grid {
-    max-width: 1200px;
-    margin: auto;
+.hero {
+    min-height: 620px;
+
+    padding: 90px 8%;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -150px;
+    top: -100px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 174, 0, 0.2),
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 700px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.tag {
+    display: inline-block;
+
+    color: #ffb000;
+
+    border: 1px solid rgba(255, 176, 0, 0.4);
+
+    background: rgba(255, 176, 0, 0.08);
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffb000;
+}
+
+.hero p {
+    color: #cbd5e1;
+
+    font-size: 20px;
+
+    max-width: 650px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+section {
+    padding: 75px 6%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #94a3b8;
+}
+
+
+/* ================================
+   CATEGORY CARDS
+================================ */
+
+.categories {
     display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.card {
+    background: rgba(15, 23, 42, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(255, 176, 0, 0.5);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #94a3b8;
+}
+
+
+/* ================================
+   FEATURED PRODUCT
+================================ */
+
+.featured {
+    max-width: 1200px;
+
+    margin: auto;
+
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(255, 176, 0, 0.15),
+            transparent 35%
+        ),
+        rgba(15, 23, 42, 0.85);
+
+    border: 1px solid rgba(255, 176, 0, 0.35);
+
+    border-radius: 24px;
+
+    padding: 50px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+}
+
+.featured-label {
+    color: #ffb000;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.featured h2 {
+    font-size: 42px;
+
+    margin-bottom: 18px;
+}
+
+.featured p {
+    color: #aebbd0;
+
+    margin-bottom: 25px;
+}
+
+.product-visual {
+    min-height: 320px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255, 176, 0, 0.2),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #111827,
+            #020617
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    font-size: 120px;
+}
+
+
+/* ================================
+   PRODUCT GRID
+================================ */
+
+.product-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
     grid-template-columns: repeat(4, 1fr);
+
     gap: 22px;
 }
 
 .product-card {
     background: rgba(15, 23, 42, 0.75);
+
     border: 1px solid rgba(255, 255, 255, 0.09);
+
     border-radius: 18px;
+
     padding: 22px;
+
     transition: 0.3s;
+
+    display: flex;
+
+    flex-direction: column;
 }
 
 .product-card:hover {
     transform: translateY(-7px);
+
     border-color: rgba(255, 176, 0, 0.5);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .product-image {
     height: 180px;
+
     border-radius: 14px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     background:
-        radial-gradient(circle, rgba(255, 176, 0, 0.2), transparent 55%),
-        linear-gradient(145deg, #111827, #020617);
+        radial-gradient(
+            circle,
+            rgba(255, 176, 0, 0.2),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #111827,
+            #020617
+        );
+
     font-size: 75px;
+
     margin-bottom: 20px;
 }
 
 .product-card h3 {
     font-size: 21px;
+
     margin-bottom: 10px;
 }
 
 .product-card p {
     color: #94a3b8;
+
     margin-bottom: 20px;
+
     min-height: 70px;
 }
 
 .product-card .button {
     font-size: 14px;
+
     padding: 11px 17px;
-}.featured {
-        max-width: 1200px;
-        margin: auto;
-        background:
-            radial-gradient(circle at 90% 20%, rgba(255, 176, 0, 0.15), transparent 35%),
-            rgba(15, 23, 42, 0.85);
-        border: 1px solid rgba(255, 176, 0, 0.35);
-        border-radius: 24px;
-        padding: 50px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 50px;
-        align-items: center;
+
+    margin-top: auto;
+
+    align-self: flex-start;
+}
+
+
+/* ================================
+   BENEFITS
+================================ */
+
+.benefits {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+}
+
+.benefit {
+    text-align: center;
+
+    padding: 25px 15px;
+
+    background: rgba(15, 23, 42, 0.6);
+
+    border-radius: 15px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.benefit strong {
+    display: block;
+
+    margin-bottom: 7px;
+}
+
+.benefit span {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    max-width: 1100px;
+
+    margin: auto;
+
+    text-align: center;
+
+    background: rgba(15, 23, 42, 0.7);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    padding: 50px;
+}
+
+.about h2 {
+    font-size: 36px;
+
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #aebbd0;
+
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 50px 6%;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: #64748b;
+}
+
+footer strong {
+    color: #ffffff;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 1000px) {
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .featured-label {
-        color: #ffb000;
-        font-weight: bold;
-        letter-spacing: 1px;
-        margin-bottom: 15px;
+    .benefits {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav div:last-child {
+        display: none;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .categories,
+    .product-grid,
+    .benefits,
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured {
+        padding: 30px;
     }
 
     .featured h2 {
-        font-size: 42px;
-        margin-bottom: 18px;
-    }
-
-    .featured p {
-        color: #aebbd0;
-        margin-bottom: 25px;
+        font-size: 32px;
     }
 
     .product-visual {
-        min-height: 320px;
-        border-radius: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background:
-            radial-gradient(circle, rgba(255, 176, 0, 0.2), transparent 45%),
-            linear-gradient(145deg, #111827, #020617);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        font-size: 120px;
+        min-height: 230px;
+
+        font-size: 90px;
     }
 
-    /* BENEFITS */
-
-    .benefits {
-        max-width: 1100px;
-        margin: auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
+    section {
+        padding: 55px 5%;
     }
 
-    .benefit {
-        text-align: center;
-        padding: 25px 15px;
-        background: rgba(15, 23, 42, 0.6);
-        border-radius: 15px;
+    .secondary-button {
+        margin-left: 0;
+
+        margin-top: 12px;
     }
+}
 
-    .benefit strong {
-        display: block;
-        margin-bottom: 7px;
-    }
-
-    .benefit span {
-        color: #94a3b8;
-        font-size: 14px;
-    }
-
-    /* ABOUT */
-
-    .about {
-        max-width: 1100px;
-        margin: auto;
-        text-align: center;
-        background: rgba(15, 23, 42, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 20px;
-        padding: 50px;
-    }
-
-    .about h2 {
-        font-size: 36px;
-        margin-bottom: 15px;
-    }
-
-    .about p {
-        color: #aebbd0;
-        max-width: 750px;
-        margin: auto;
-    }
-
-    /* FOOTER */
-
-    footer {
-        padding: 50px 6%;
-        text-align: center;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        color: #64748b;
-    }
-
-    footer strong {
-        color: #ffffff;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 800px) {
-
-        nav {
-            padding: 15px 5%;
-        }
-
-        nav div:last-child {
-            display: none;
-        }
-
-        .hero {
-            padding: 70px 7%;
-        }
-
-        .hero p {
-            font-size: 17px;
-        }
-
-        .categories,
-        .benefits,
-        .product-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .featured {
-            padding: 30px;
-        }
-
-        .featured h2 {
-            font-size: 32px;
-        }
-
-        .product-visual {
-            min-height: 230px;
-            font-size: 90px;
-        }
-
-        section {
-            padding: 55px 5%;
-        }
-
-        .secondary-button {
-            margin-left: 0;
-            margin-top: 12px;
-        }
-    }
 </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ================================
+     NAVIGATION
+================================ -->
 
 <nav>
-    <div class="logo">🛍️ MULLIN <span>PICKS</span></div>
+
+    <div class="logo">
+        🛍️ MULLIN <span>PICKS</span>
+    </div>
 
     <div>
+
         <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#picks">Picks</a>
-        <a href="#about">About</a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <a href="#picks">
+            Picks
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
     </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- ================================
+     HERO
+================================ -->
 
 <header class="hero" id="home">
 
     <div class="hero-content">
 
-        <div class="tag">⭐ EVERYDAY FINDS</div>
+        <div class="tag">
+            ⭐ EVERYDAY FINDS
+        </div>
 
         <h1>
             Discover things<br>
@@ -452,15 +683,22 @@
         </h1>
 
         <p>
-            Useful products, interesting finds, and everyday
-            items that can make life a little easier.
+            Useful products, interesting finds,
+            and everyday items that can make
+            life a little easier.
         </p>
 
-        <a class="button" href="#categories">
+        <a
+            class="button"
+            href="#categories"
+        >
             Explore Finds →
         </a>
 
-        <a class="secondary-button" href="#featured">
+        <a
+            class="secondary-button"
+            href="#featured"
+        >
             Featured Pick
         </a>
 
@@ -469,54 +707,95 @@
 </header>
 
 
-<!-- CATEGORIES -->
+<!-- ================================
+     CATEGORIES
+================================ -->
 
 <section id="categories">
 
     <div class="section-title">
-        <h2>Explore Categories</h2>
-        <p>Find something useful for everyday life.</p>
+
+        <h2>
+            Explore Categories
+        </h2>
+
+        <p>
+            Find something useful for everyday life.
+        </p>
+
     </div>
+
 
     <div class="categories">
 
+
         <div class="card">
-            <div class="icon">🛍️</div>
-            <h3>Everyday Finds</h3>
+
+            <div class="icon">
+                🛍️
+            </div>
+
+            <h3>
+                Everyday Finds
+            </h3>
+
             <p>
                 Useful items, small upgrades,
                 and practical things for daily life.
             </p>
+
         </div>
 
+
         <div class="card">
-            <div class="icon">🏠</div>
-            <h3>Home & Everyday</h3>
+
+            <div class="icon">
+                🏠
+            </div>
+
+            <h3>
+                Home & Everyday
+            </h3>
+
             <p>
                 Ideas for your home, routines,
                 comfort, and organization.
             </p>
+
         </div>
 
+
         <div class="card">
-            <div class="icon">🎮</div>
-            <h3>Fun & Lifestyle</h3>
+
+            <div class="icon">
+                🎮
+            </div>
+
+            <h3>
+                Fun & Lifestyle
+            </h3>
+
             <p>
                 Interesting finds for hobbies,
                 entertainment, and lifestyle.
             </p>
+
         </div>
+
 
     </div>
 
 </section>
 
 
-<!-- FEATURED -->
+<!-- ================================
+     FEATURED PRODUCT
+================================ -->
 
 <section id="featured">
 
     <div class="featured">
+
 
         <div>
 
@@ -524,136 +803,272 @@
                 ⭐ FEATURED EVERYDAY FIND
             </div>
 
-            <h2>Adjustable Phone Stand</h2>
+            <h2>
+                Adjustable Phone Stand
+            </h2>
 
             <p>
-                A simple accessory for keeping your phone
-                upright while watching videos, making calls,
-                or working at your desk.
+                A simple accessory for keeping
+                your phone upright while watching
+                videos, making calls, or working
+                at your desk.
             </p>
 
-            <a class="button"
-               href="https://www.amazon.com/s?k=adjustable+phone+stand"
-               target="_blank"
-               rel="noopener noreferrer">
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=adjustable+phone+stand"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 View Product →
             </a>
 
         </div>
+
 
         <div class="product-visual">
             📱
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- BENEFITS -->
+<!-- ================================
+     MULLIN PICKS
+================================ -->
 
 <section id="picks">
 
     <div class="section-title">
-        <h2>🔥 Mullin Picks</h2>
-        <p>Some useful finds worth checking out.</p>
+
+        <h2>
+            🔥 Mullin Picks
+        </h2>
+
+        <p>
+            Some useful finds worth checking out.
+        </p>
+
     </div>
+
 
     <div class="product-grid">
 
-        <div class="product-card">
-            <div class="product-image">📱</div>
-            <h3>Adjustable Phone Stand</h3>
-            <p>Keep your phone upright while watching videos or working.</p>
-            <a class="button"
-               href="https://www.amazon.com/s?k=adjustable+phone+stand"
-               target="_blank"
-               rel="noopener noreferrer">
-                View Product →
-            </a>
-        </div>
+
+        <!-- PRODUCT 1 -->
 
         <div class="product-card">
-            <div class="product-image">💡</div>
-            <h3>LED Desk Light</h3>
-            <p>A simple lighting upgrade for your desk or workspace.</p>
-            <a class="button"
-               href="https://www.amazon.com/s?k=LED+desk+lamp"
-               target="_blank"
-               rel="noopener noreferrer">
+
+            <div class="product-image">
+                📱
+            </div>
+
+            <h3>
+                Adjustable Phone Stand
+            </h3>
+
+            <p>
+                Keep your phone upright while
+                watching videos or working.
+            </p>
+
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=adjustable+phone+stand"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 View Product →
             </a>
+
         </div>
 
-        <div class="product-card">
-            <div class="product-image">🎧</div>
-            <h3>Headphone Stand</h3>
-            <p>A convenient way to keep headphones organized on your desk.</p>
-            <a class="button"
-               href="https://www.amazon.com/s?k=headphone+stand"
-               target="_blank"
-               rel="noopener noreferrer">
-                View Product →
-            </a>
-        </div>
+
+        <!-- PRODUCT 2 -->
 
         <div class="product-card">
-            <div class="product-image">🔌</div>
-            <h3>USB Hub</h3>
-            <p>Add extra USB ports when you need more connections.</p>
-            <a class="button"
-               href="https://www.amazon.com/s?k=USB+hub"
-               target="_blank"
-               rel="noopener noreferrer">
+
+            <div class="product-image">
+                💡
+            </div>
+
+            <h3>
+                LED Desk Light
+            </h3>
+
+            <p>
+                A simple lighting upgrade for
+                your desk or workspace.
+            </p>
+
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=LED+desk+lamp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 View Product →
             </a>
+
         </div>
+
+
+        <!-- PRODUCT 3 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🎧
+            </div>
+
+            <h3>
+                Headphone Stand
+            </h3>
+
+            <p>
+                A convenient way to keep
+                headphones organized on your desk.
+            </p>
+
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=headphone+stand"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Product →
+            </a>
+
+        </div>
+
+
+        <!-- PRODUCT 4 -->
+
+        <div class="product-card">
+
+            <div class="product-image">
+                🔌
+            </div>
+
+            <h3>
+                USB Hub
+            </h3>
+
+            <p>
+                Add extra USB ports when you
+                need more connections.
+            </p>
+
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=USB+hub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Product →
+            </a>
+
+        </div>
+
 
     </div>
 
 </section>
+
+
+<!-- ================================
+     BENEFITS
+================================ -->
+
+<section>
 
     <div class="benefits">
 
-        <div class="benefit">
-            <strong>🔎 Carefully Selected</strong>
-            <span>Interesting products worth exploring.</span>
-        </div>
 
         <div class="benefit">
-            <strong>⏱️ Save Time</strong>
-            <span>Discover ideas without endless searching.</span>
+
+            <strong>
+                🔎 Carefully Selected
+            </strong>
+
+            <span>
+                Interesting products worth exploring.
+            </span>
+
         </div>
 
-        <div class="benefit">
-            <strong>💡 Useful Ideas</strong>
-            <span>Products chosen for everyday usefulness.</span>
-        </div>
 
         <div class="benefit">
-            <strong>⭐ New Finds</strong>
-            <span>More discoveries coming soon.</span>
+
+            <strong>
+                ⏱️ Save Time
+            </strong>
+
+            <span>
+                Discover ideas without endless searching.
+            </span>
+
         </div>
+
+
+        <div class="benefit">
+
+            <strong>
+                💡 Useful Ideas
+            </strong>
+
+            <span>
+                Products chosen for everyday usefulness.
+            </span>
+
+        </div>
+
+
+        <div class="benefit">
+
+            <strong>
+                ⭐ New Finds
+            </strong>
+
+            <span>
+                More discoveries coming soon.
+            </span>
+
+        </div>
+
 
     </div>
 
 </section>
 
 
-<!-- ABOUT -->
+<!-- ================================
+     ABOUT
+================================ -->
 
 <section id="about">
 
     <div class="about">
 
-        <h2>About Mullin Picks</h2>
+        <h2>
+            About Mullin Picks
+        </h2>
 
         <p>
-            Mullin Picks is a product-discovery website focused
-            on useful everyday items, interesting finds, and
-            products worth checking out.
+
+            Mullin Picks is a product-discovery
+            website focused on useful everyday
+            items, interesting finds, and products
+            worth checking out.
+
             <br><br>
-            We're building this site one find at a time.
+
+            We're building this site one find
+            at a time.
+
         </p>
 
     </div>
@@ -661,19 +1076,25 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================================
+     FOOTER
+================================ -->
 
 <footer>
 
     <p>
-        <strong>🛍️ MULLIN PICKS</strong>
+        <strong>
+            🛍️ MULLIN PICKS
+        </strong>
     </p>
 
     <p>
-        © 2026 Mullin Picks — All rights reserved.
+        © 2026 Mullin Picks —
+        All rights reserved.
     </p>
 
 </footer>
+
 
 </body>
 </html>
