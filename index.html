@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mullin Picks | Smart Everyday Finds</title>
-
-<meta name="description"
-content="Mullin Picks discovers useful products, clever gadgets, home items and everyday finds worth checking out.">
+<title>Mullin Picks | Philippine Everyday Finds</title>
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -29,41 +19,30 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background:
-        radial-gradient(circle at 80% 0%, rgba(255,176,0,.15), transparent 30%),
-        radial-gradient(circle at 0% 30%, rgba(0,140,255,.12), transparent 30%),
-        linear-gradient(135deg,#030711,#081526,#10091b);
-
-    color: white;
-    min-height: 100vh;
+    background: #07111f;
+    color: #ffffff;
     line-height: 1.6;
 }
 
-/* =====================================================
+/* =========================
    NAVIGATION
-===================================================== */
+========================= */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 999;
-
+    z-index: 1000;
+    background: rgba(7, 17, 31, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 16px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 18px 6%;
-
-    background: rgba(3,7,17,.94);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .logo {
-    font-size: 23px;
-    font-weight: 900;
-    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 800;
 }
 
 .logo span {
@@ -72,67 +51,51 @@ nav {
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 24px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    transition: .3s;
 }
 
 .nav-links a:hover {
     color: #ffb000;
 }
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero {
-    min-height: 650px;
-
+    min-height: 620px;
+    padding: 70px 6%;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 
-    padding: 90px 8%;
-
-    position: relative;
-    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(255,176,0,0.15), transparent 35%),
+        linear-gradient(135deg, #061425, #07111f 60%, #100b1d);
 }
 
-.hero-content {
-    max-width: 750px;
-    position: relative;
-    z-index: 2;
-}
-
-.badge {
-    display: inline-block;
-
-    padding: 8px 15px;
-
-    border-radius: 30px;
-
+.tag {
     color: #ffb000;
-
-    border: 1px solid rgba(255,176,0,.4);
-
-    background: rgba(255,176,0,.08);
-
+    border: 1px solid rgba(255,176,0,0.4);
+    background: rgba(255,176,0,0.08);
+    padding: 8px 16px;
+    border-radius: 30px;
     font-size: 13px;
-    font-weight: bold;
-
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(48px,7vw,85px);
-
-    line-height: .98;
-
-    margin-bottom: 25px;
+    font-size: clamp(45px, 7vw, 80px);
+    line-height: 1.05;
+    margin-bottom: 20px;
 }
 
 .hero h1 span {
@@ -140,469 +103,287 @@ nav {
 }
 
 .hero p {
-    color: #cbd5e1;
-
-    font-size: 20px;
-
-    max-width: 650px;
-
-    margin-bottom: 30px;
+    max-width: 700px;
+    color: #aebbd0;
+    font-size: 19px;
+    margin-bottom: 35px;
 }
 
-/* =====================================================
-   BUTTONS
-===================================================== */
+/* =========================
+   SEARCH
+========================= */
 
-.button {
-    display: inline-block;
-
-    background: #ffb000;
-
-    color: #111827;
-
-    padding: 14px 24px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: .3s;
+.search-box {
+    width: min(820px, 100%);
+    display: flex;
+    background: #111827;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
 }
 
-.button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 30px rgba(255,176,0,.3);
-}
-
-.secondary-button {
-    display: inline-block;
-
+.search-box input {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+    background: transparent;
     color: white;
-
-    border: 1px solid #475569;
-
-    padding: 13px 23px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    margin-left: 10px;
-
-    transition: .3s;
+    border: none;
+    outline: none;
+    font-size: 18px;
 }
 
-.secondary-button:hover {
-    color: #ffb000;
-    border-color: #ffb000;
+.search-box input::placeholder {
+    color: #64748b;
 }
 
-/* =====================================================
+.search-box button {
+    border: none;
+    background: #ffb000;
+    color: #111827;
+    font-weight: bold;
+    padding: 0 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.search-box button:hover {
+    background: #ffc43d;
+}
+
+.search-hint {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================
    GENERAL SECTIONS
-===================================================== */
+========================= */
 
 section {
-    padding: 80px 6%;
+    padding: 75px 6%;
 }
 
 .section-title {
     text-align: center;
-
-    max-width: 700px;
-
-    margin: 0 auto 45px;
+    margin-bottom: 40px;
 }
 
 .section-title h2 {
-    font-size: 40px;
-
-    margin-bottom: 10px;
+    font-size: 38px;
+    margin-bottom: 8px;
 }
 
 .section-title p {
     color: #94a3b8;
 }
 
-/* =====================================================
-   SEARCH
-===================================================== */
-
-.search-box {
-    max-width: 650px;
-
-    margin: 0 auto 45px;
-
-    display: flex;
-}
-
-.search-box input {
-    width: 100%;
-
-    padding: 16px 20px;
-
-    border-radius: 12px 0 0 12px;
-
-    border: 1px solid #334155;
-
-    outline: none;
-
-    background: #0f172a;
-
-    color: white;
-
-    font-size: 16px;
-}
-
-.search-box button {
-    padding: 0 22px;
-
-    border: none;
-
-    background: #ffb000;
-
-    color: #111827;
-
-    font-weight: bold;
-
-    border-radius: 0 12px 12px 0;
-
-    cursor: pointer;
-}
-
-/* =====================================================
-   CATEGORIES
-===================================================== */
+/* =========================
+   CATEGORY BUTTONS
+========================= */
 
 .categories {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap: 22px;
-}
-
-.category {
-    padding: 30px;
-
-    background: rgba(15,23,42,.75);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    border-radius: 18px;
-
-    transition: .3s;
-}
-
-.category:hover {
-    transform: translateY(-6px);
-
-    border-color: rgba(255,176,0,.5);
-}
-
-.category-icon {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-.category h3 {
-    font-size: 22px;
-
-    margin-bottom: 10px;
-}
-
-.category p {
-    color: #94a3b8;
-}
-
-/* =====================================================
-   PRODUCTS
-===================================================== */
-
-.products {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap: 22px;
-}
-
-.product {
-    background: rgba(15,23,42,.8);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    border-radius: 18px;
-
-    padding: 20px;
-
-    transition: .3s;
-
-    overflow: hidden;
-}
-
-.product:hover {
-    transform: translateY(-7px);
-
-    border-color: rgba(255,176,0,.5);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.3);
-}
-
-.product-image {
-    height: 190px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,176,0,.22),
-            transparent 55%
-        ),
-        linear-gradient(
-            145deg,
-            #111827,
-            #020617
-        );
-
-    font-size: 75px;
-
-    margin-bottom: 20px;
-}
-
-.product h3 {
-    font-size: 20px;
-
-    margin-bottom: 10px;
-}
-
-.product p {
-    color: #94a3b8;
-
-    font-size: 14px;
-
-    min-height: 70px;
-
-    margin-bottom: 20px;
-}
-
-.product .button {
-    font-size: 13px;
-
-    padding: 11px 15px;
-}
-
-/* =====================================================
-   FEATURED
-===================================================== */
-
-.featured {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 45px;
-
-    align-items: center;
-
-    padding: 45px;
-
-    border-radius: 25px;
-
-    background:
-        radial-gradient(
-            circle at 90% 10%,
-            rgba(255,176,0,.18),
-            transparent 35%
-        ),
-        rgba(15,23,42,.85);
-
-    border:
-        1px solid rgba(255,176,0,.3);
-}
-
-.featured-label {
-    color: #ffb000;
-
-    font-weight: bold;
-
-    margin-bottom: 15px;
-}
-
-.featured h2 {
-    font-size: 42px;
-
-    margin-bottom: 15px;
-}
-
-.featured p {
-    color: #aebbd0;
-
-    margin-bottom: 25px;
-}
-
-.featured-image {
-    min-height: 320px;
-
-    border-radius: 20px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    font-size: 130px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,176,0,.2),
-            transparent 50%
-        ),
-        linear-gradient(
-            145deg,
-            #111827,
-            #020617
-        );
-}
-
-/* =====================================================
-   WHY MULLIN PICKS
-===================================================== */
-
-.benefits {
     max-width: 1100px;
-
     margin: auto;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
 }
 
-.benefit {
-    text-align: center;
-
-    padding: 25px 15px;
-
-    background:
-        rgba(15,23,42,.6);
-
+.category-button {
+    border: 1px solid rgba(255,255,255,0.08);
+    background: #0f1b2d;
+    color: white;
     border-radius: 15px;
+    padding: 22px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.2s;
 }
 
-.benefit strong {
-    display: block;
+.category-button:hover,
+.category-button.active {
+    border-color: #ffb000;
+    background: rgba(255,176,0,0.1);
+    transform: translateY(-3px);
+}
 
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: #0d1829;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 18px;
+    transition: 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,176,0,0.5);
+}
+
+.product-image {
+    height: 180px;
+    border-radius: 14px;
+    background:
+        radial-gradient(circle, rgba(255,176,0,0.18), transparent 55%),
+        #07101d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 75px;
+    margin-bottom: 18px;
+}
+
+.product-card h3 {
+    font-size: 20px;
     margin-bottom: 8px;
 }
 
-.benefit span {
+.product-card p {
     color: #94a3b8;
+    font-size: 14px;
+    min-height: 66px;
+    margin-bottom: 15px;
+}
 
+.product-category {
+    display: inline-block;
+    color: #ffb000;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.shop-button {
+    flex: 1;
+    min-width: 90px;
+    padding: 10px 8px;
+    border-radius: 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    background: #ffb000;
+    color: #111827;
+}
+
+.shop-button:hover {
+    background: #ffc43d;
+}
+
+/* =========================
+   RESULTS
+========================= */
+
+.results-info {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+    color: #94a3b8;
     font-size: 14px;
 }
 
-/* =====================================================
+/* =========================
+   PERSONALIZATION
+========================= */
+
+.personalized {
+    max-width: 1200px;
+    margin: auto;
+    background:
+        radial-gradient(circle at 90% 10%, rgba(255,176,0,0.13), transparent 35%),
+        #0d1829;
+    border: 1px solid rgba(255,176,0,0.25);
+    border-radius: 22px;
+    padding: 35px;
+}
+
+.personalized h2 {
+    margin-bottom: 8px;
+}
+
+.personalized > p {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.step {
+    background: #0d1829;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.step-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #ffb000;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    font-weight: bold;
+}
+
+/* =========================
    ABOUT
-===================================================== */
+========================= */
 
 .about {
     max-width: 900px;
-
     margin: auto;
-
     text-align: center;
-
-    padding: 50px;
-
-    border-radius: 22px;
-
-    background:
-        rgba(15,23,42,.7);
-
-    border:
-        1px solid rgba(255,255,255,.08);
-}
-
-.about h2 {
-    font-size: 38px;
-
-    margin-bottom: 15px;
+    background: #0d1829;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 45px;
 }
 
 .about p {
     color: #aebbd0;
 }
 
-/* =====================================================
-   DISCLOSURE
-===================================================== */
-
-.disclosure {
-    max-width: 900px;
-
-    margin: 0 auto;
-
-    padding: 20px;
-
-    border-radius: 12px;
-
-    background: rgba(255,176,0,.08);
-
-    border:
-        1px solid rgba(255,176,0,.25);
-
-    color: #cbd5e1;
-
-    font-size: 13px;
-
-    text-align: center;
-}
-
-/* =====================================================
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer {
-    padding: 50px 6%;
-
+    padding: 45px 6%;
     text-align: center;
-
-    border-top:
-        1px solid rgba(255,255,255,.08);
-
+    border-top: 1px solid rgba(255,255,255,0.08);
     color: #64748b;
 }
 
@@ -610,144 +391,79 @@ footer strong {
     color: white;
 }
 
-.footer-links {
-    margin: 15px 0;
-}
-
-.footer-links a {
-    color: #94a3b8;
-
-    text-decoration: none;
-
-    margin: 0 10px;
-}
-
-.footer-links a:hover {
-    color: #ffb000;
-}
-
-/* =====================================================
-   BACK TO TOP
-===================================================== */
-
-#topButton {
-    position: fixed;
-
-    right: 20px;
-
-    bottom: 20px;
-
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-
-    border: none;
-
-    background: #ffb000;
-
-    color: #111827;
-
-    font-size: 20px;
-
-    cursor: pointer;
-
-    display: none;
-
-    z-index: 1000;
-}
-
-/* =====================================================
+/* =========================
    MOBILE
-===================================================== */
+========================= */
 
-@media(max-width:900px) {
+@media (max-width: 900px) {
 
-    .products {
-        grid-template-columns:
-            repeat(2,1fr);
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .benefits {
-        grid-template-columns:
-            repeat(2,1fr);
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    .steps {
+        grid-template-columns: 1fr;
+    }
 }
 
-@media(max-width:700px) {
+@media (max-width: 600px) {
 
     nav {
-        padding: 15px 5%;
+        padding: 14px 5%;
     }
 
     .nav-links {
         display: none;
     }
 
-    .hero {
-        min-height: 550px;
-
-        padding:
-            70px 7%;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    .secondary-button {
-        margin-left: 0;
-
-        margin-top: 12px;
-    }
-
-    .categories,
-    .products,
-    .benefits,
-    .featured {
-        grid-template-columns: 1fr;
-    }
-
-    .featured {
-        padding: 30px;
-    }
-
-    .featured h2 {
-        font-size: 32px;
-    }
-
-    .featured-image {
-        min-height: 240px;
-
-        font-size: 90px;
-    }
-
     section {
+        padding: 55px 5%;
+    }
+
+    .hero {
+        min-height: 600px;
         padding: 60px 5%;
     }
 
-    .about {
-        padding: 30px 20px;
+    .hero p {
+        font-size: 16px;
+    }
+
+    .search-box {
+        flex-direction: column;
     }
 
     .search-box input {
-        font-size: 14px;
+        width: 100%;
     }
 
+    .search-box button {
+        padding: 15px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .personalized,
+    .about {
+        padding: 25px;
+    }
 }
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =====================================================
-     NAVIGATION
-===================================================== -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -756,130 +472,66 @@ footer strong {
     </div>
 
     <div class="nav-links">
-
         <a href="#home">Home</a>
-
-        <a href="#categories">
-            Categories
-        </a>
-
-        <a href="#picks">
-            Picks
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
+        <a href="#categories">Categories</a>
+        <a href="#picks">Picks</a>
+        <a href="#about">About</a>
     </div>
 
 </nav>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
-<header
-    class="hero"
-    id="home"
->
+<header class="hero" id="home">
 
-    <div class="hero-content">
+    <div class="tag">🇵🇭 PHILIPPINE EVERYDAY FINDS</div>
 
-        <div class="badge">
-            ⭐ EVERYDAY FINDS
-        </div>
+    <h1>
+        Find things<br>
+        <span>worth buying.</span>
+    </h1>
 
-        <h1>
+    <p>
+        Search for useful products and discover interesting
+        finds from popular online shopping platforms in the Philippines.
+    </p>
 
-            Discover things
 
-            <br>
+    <!-- SEARCH BAR -->
 
-            <span>worth finding.</span>
+    <form class="search-box" id="searchForm">
 
-        </h1>
-
-        <p>
-
-            Useful products, clever gadgets,
-            home upgrades and interesting
-            everyday finds — all in one place.
-
-        </p>
-
-        <a
-            href="#picks"
-            class="button"
+        <input
+            id="searchInput"
+            type="search"
+            placeholder="Search for anything... e.g. rain coat"
+            autocomplete="off"
         >
-            Explore Picks →
-        </a>
 
-        <a
-            href="#featured"
-            class="secondary-button"
-        >
-            Featured Pick
-        </a>
+        <button type="submit">
+            Search
+        </button>
 
+    </form>
+
+    <div class="search-hint">
+        Try: phone stand, desk light, headphones, USB hub
     </div>
 
 </header>
 
 
-<!-- =====================================================
-     SEARCH
-===================================================== -->
+<!-- CATEGORIES -->
 
-<section>
+<section id="categories">
 
     <div class="section-title">
 
-        <h2>
-            🔎 Find Something
-        </h2>
+        <h2>Explore Categories</h2>
 
         <p>
-            Search the Mullin Picks collection.
-        </p>
-
-    </div>
-
-
-    <div class="search-box">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search products..."
-        >
-
-        <button onclick="searchProducts()">
-            Search
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     CATEGORIES
-===================================================== -->
-
-<section
-    id="categories"
->
-
-    <div class="section-title">
-
-        <h2>
-            Explore Categories
-        </h2>
-
-        <p>
-            Discover useful things for everyday life.
+            Choose what you're looking for.
         </p>
 
     </div>
@@ -887,400 +539,149 @@ footer strong {
 
     <div class="categories">
 
+        <button class="category-button" data-category="all">
+            🛍️ All Finds
+        </button>
 
-        <div class="category">
+        <button class="category-button" data-category="tech">
+            💻 Tech
+        </button>
 
-            <div class="category-icon">
-                🛍️
-            </div>
+        <button class="category-button" data-category="home">
+            🏠 Home
+        </button>
 
-            <h3>
-                Everyday Finds
-            </h3>
+        <button class="category-button" data-category="lifestyle">
+            🎮 Lifestyle
+        </button>
 
-            <p>
-                Practical products and
-                clever little upgrades.
-            </p>
+        <button class="category-button" data-category="fashion">
+            👕 Fashion
+        </button>
 
-        </div>
+        <button class="category-button" data-category="travel">
+            🎒 Travel
+        </button>
 
+        <button class="category-button" data-category="school">
+            📚 School
+        </button>
 
-        <div class="category">
-
-            <div class="category-icon">
-                🏠
-            </div>
-
-            <h3>
-                Home
-            </h3>
-
-            <p>
-                Useful items for your
-                home and workspace.
-            </p>
-
-        </div>
-
-
-        <div class="category">
-
-            <div class="category-icon">
-                🎮
-            </div>
-
-            <h3>
-                Fun & Lifestyle
-            </h3>
-
-            <p>
-                Interesting products for
-                hobbies and entertainment.
-            </p>
-
-        </div>
-
+        <button class="category-button" data-category="other">
+            ⭐ Other
+        </button>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     FEATURED PRODUCT
-===================================================== -->
+<!-- PERSONALIZED PICKS -->
 
-<section
-    id="featured"
->
+<section id="picks">
 
-    <div class="featured">
+    <div class="personalized">
 
-
-        <div>
-
-            <div class="featured-label">
-
-                ⭐ FEATURED PICK
-
-            </div>
-
-
-            <h2>
-
-                Adjustable Phone Stand
-
-            </h2>
-
-
-            <p>
-
-                A simple desk accessory
-                that keeps your phone upright
-                while watching videos,
-                working or making calls.
-
-            </p>
-
-
-            <!--
-            IMPORTANT:
-
-            Replace this URL later with
-            YOUR approved affiliate link.
-            -->
-
-            <a
-                href="https://www.amazon.com/s?k=adjustable+phone+stand"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="button"
-            >
-
-                View Product →
-
-            </a>
-
-        </div>
-
-
-        <div class="featured-image">
-
-            📱
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     MULLIN PICKS
-===================================================== -->
-
-<section
-    id="picks"
->
-
-    <div class="section-title">
-
-        <h2>
-            🔥 Mullin Picks
-        </h2>
+        <h2>🔥 Picks For You</h2>
 
         <p>
-            Products worth checking out.
+            Mullin Picks remembers which categories visitors interact
+            with and uses that information to improve the order of products.
         </p>
 
-    </div>
-
-
-    <div
-        class="products"
-        id="productGrid"
-    >
-
-
-        <!-- PRODUCT 1 -->
-
-        <div
-            class="product"
-            data-name="phone stand"
-        >
-
-            <div class="product-image">
-                📱
-            </div>
-
-            <h3>
-                Adjustable Phone Stand
-            </h3>
-
-            <p>
-                Keep your phone upright
-                while watching videos
-                or working.
-            </p>
-
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=adjustable+phone+stand"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
-
+        <div class="results-info" id="resultsInfo">
+            Showing recommended finds.
         </div>
 
-
-        <!-- PRODUCT 2 -->
-
-        <div
-            class="product"
-            data-name="led desk lamp light"
-        >
-
-            <div class="product-image">
-                💡
-            </div>
-
-            <h3>
-                LED Desk Light
-            </h3>
-
-            <p>
-                A simple lighting upgrade
-                for your desk or workspace.
-            </p>
-
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=LED+desk+lamp"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
-
-        </div>
-
-
-        <!-- PRODUCT 3 -->
-
-        <div
-            class="product"
-            data-name="headphone stand"
-        >
-
-            <div class="product-image">
-                🎧
-            </div>
-
-            <h3>
-                Headphone Stand
-            </h3>
-
-            <p>
-                Keep your headphones
-                organized on your desk.
-            </p>
-
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=headphone+stand"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
-
-        </div>
-
-
-        <!-- PRODUCT 4 -->
-
-        <div
-            class="product"
-            data-name="usb hub"
-        >
-
-            <div class="product-image">
-                🔌
-            </div>
-
-            <h3>
-                USB Hub
-            </h3>
-
-            <p>
-                Add extra USB connections
-                when you need them.
-            </p>
-
-            <a
-                class="button"
-                href="https://www.amazon.com/s?k=USB+hub"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                View Product →
-            </a>
-
-        </div>
-
+        <div class="product-grid" id="productGrid"></div>
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     WHY MULLIN PICKS
-===================================================== -->
+<!-- HOW IT WORKS -->
 
 <section>
 
     <div class="section-title">
 
-        <h2>
-            Why Mullin Picks?
-        </h2>
+        <h2>How Mullin Picks Works</h2>
+
+        <p>
+            Simple for visitors. Better recommendations over time.
+        </p>
 
     </div>
 
 
-    <div class="benefits">
+    <div class="steps">
 
+        <div class="step">
 
-        <div class="benefit">
+            <div class="step-number">1</div>
 
-            <strong>
-                🔎 Carefully Selected
-            </strong>
+            <h3>Search</h3>
 
-            <span>
-                Interesting products
-                worth exploring.
-            </span>
+            <p>
+                Visitors search for something they want.
+            </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="step">
 
-            <strong>
-                ⏱️ Save Time
-            </strong>
+            <div class="step-number">2</div>
 
-            <span>
-                Discover products without
-                endless searching.
-            </span>
+            <h3>Discover</h3>
 
-        </div>
-
-
-        <div class="benefit">
-
-            <strong>
-                💡 Useful Ideas
-            </strong>
-
-            <span>
-                Focused on everyday usefulness.
-            </span>
+            <p>
+                They see products related to their interests.
+            </p>
 
         </div>
 
 
-        <div class="benefit">
+        <div class="step">
 
-            <strong>
-                ⭐ New Finds
-            </strong>
+            <div class="step-number">3</div>
 
-            <span>
-                More discoveries coming soon.
-            </span>
+            <h3>Shop</h3>
+
+            <p>
+                They can visit a shopping platform through
+                your affiliate link.
+            </p>
 
         </div>
-
 
     </div>
 
 </section>
 
 
-<!-- =====================================================
-     ABOUT
-===================================================== -->
+<!-- ABOUT -->
 
-<section
-    id="about"
->
+<section id="about">
 
     <div class="about">
 
-        <h2>
-            About Mullin Picks
-        </h2>
+        <h2>About Mullin Picks</h2>
+
+        <br>
 
         <p>
+            Mullin Picks is a product-discovery website focused
+            on useful everyday products and interesting finds
+            available to shoppers in the Philippines.
+        </p>
 
-            Mullin Picks is a product-discovery
-            website focused on useful everyday
-            items, interesting gadgets and
-            products worth checking out.
+        <br>
 
-            <br><br>
-
-            We're building Mullin Picks
-            one great find at a time.
-
+        <p>
+            Our goal is simple:
+            help people find useful products faster.
         </p>
 
     </div>
@@ -1288,181 +689,476 @@ footer strong {
 </section>
 
 
-<!-- =====================================================
-     AFFILIATE DISCLOSURE
-===================================================== -->
-
-<section>
-
-    <div class="disclosure">
-
-        <strong>
-            Affiliate Disclosure:
-        </strong>
-
-        Some links on Mullin Picks may be
-        affiliate links. If you make a qualifying
-        purchase through an affiliate link,
-        Mullin Picks may earn a commission
-        at no additional cost to you.
-
-        <br><br>
-
-        <strong>
-            Amazon Associate Disclosure:
-        </strong>
-
-        If Mullin Picks participates in the
-        Amazon Associates Program, the required
-        Amazon Associate disclosure will appear
-        here.
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
+<!-- FOOTER -->
 
 <footer>
 
     <p>
-        <strong>
-            🛍️ MULLIN PICKS
-        </strong>
+        <strong>🛍️ MULLIN PICKS</strong>
     </p>
-
-
-    <div class="footer-links">
-
-        <a href="#home">
-            Home
-        </a>
-
-        <a href="#categories">
-            Categories
-        </a>
-
-        <a href="#picks">
-            Picks
-        </a>
-
-        <a href="#about">
-            About
-        </a>
-
-    </div>
-
 
     <p>
         © 2026 Mullin Picks
     </p>
 
+    <p>
+        Affiliate links may earn Mullin Picks a commission
+        when available.
+    </p>
+
 </footer>
 
 
-<!-- =====================================================
-     BACK TO TOP
-===================================================== -->
-
-<button
-    id="topButton"
-    onclick="window.scrollTo({top:0,behavior:'smooth'})"
->
-    ↑
-</button>
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
-/* =====================================================
-   PRODUCT SEARCH
-===================================================== */
+/* ==========================================
+   PRODUCT DATABASE
+========================================== */
 
-function searchProducts() {
+const products = [
 
-    const input =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
-
-    const products =
-        document.querySelectorAll(".product");
-
-    products.forEach(function(product) {
-
-        const name =
-            product
-            .getAttribute("data-name")
-            .toLowerCase();
-
-        if (
-            input === "" ||
-            name.includes(input)
-        ) {
-
-            product.style.display = "block";
-
-        } else {
-
-            product.style.display = "none";
-
+    {
+        name: "Adjustable Phone Stand",
+        description: "Keep your phone upright while watching videos or working.",
+        category: "tech",
+        icon: "📱",
+        search: "phone stand mobile smartphone desk",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=adjustable%20phone%20stand",
+            lazada: "https://www.lazada.com.ph/catalog/?q=adjustable%20phone%20stand",
+            tiktok: "https://www.tiktok.com/search?q=adjustable%20phone%20stand"
         }
+    },
+
+    {
+        name: "LED Desk Light",
+        description: "A simple lighting upgrade for your desk or workspace.",
+        category: "home",
+        icon: "💡",
+        search: "LED desk lamp light study workspace",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=LED%20desk%20lamp",
+            lazada: "https://www.lazada.com.ph/catalog/?q=LED%20desk%20lamp",
+            tiktok: "https://www.tiktok.com/search?q=LED%20desk%20lamp"
+        }
+    },
+
+    {
+        name: "Headphone Stand",
+        description: "Keep headphones organized and easy to reach.",
+        category: "tech",
+        icon: "🎧",
+        search: "headphone stand headset gaming desk",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=headphone%20stand",
+            lazada: "https://www.lazada.com.ph/catalog/?q=headphone%20stand",
+            tiktok: "https://www.tiktok.com/search?q=headphone%20stand"
+        }
+    },
+
+    {
+        name: "USB Hub",
+        description: "Add extra USB connections to your computer.",
+        category: "tech",
+        icon: "🔌",
+        search: "USB hub computer laptop adapter",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=USB%20hub",
+            lazada: "https://www.lazada.com.ph/catalog/?q=USB%20hub",
+            tiktok: "https://www.tiktok.com/search?q=USB%20hub"
+        }
+    },
+
+    {
+        name: "Rain Coat",
+        description: "A practical item to keep around during rainy weather.",
+        category: "fashion",
+        icon: "🧥",
+        search: "rain coat rain jacket waterproof Philippines",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=rain%20coat",
+            lazada: "https://www.lazada.com.ph/catalog/?q=rain%20coat",
+            tiktok: "https://www.tiktok.com/search?q=rain%20coat"
+        }
+    },
+
+    {
+        name: "Travel Backpack",
+        description: "Useful storage for school, work and everyday trips.",
+        category: "travel",
+        icon: "🎒",
+        search: "travel backpack school bag laptop bag",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=travel%20backpack",
+            lazada: "https://www.lazada.com.ph/catalog/?q=travel%20backpack",
+            tiktok: "https://www.tiktok.com/search?q=travel%20backpack"
+        }
+    },
+
+    {
+        name: "Desk Organizer",
+        description: "Keep small items organized around your workspace.",
+        category: "home",
+        icon: "🗂️",
+        search: "desk organizer office storage study",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=desk%20organizer",
+            lazada: "https://www.lazada.com.ph/catalog/?q=desk%20organizer",
+            tiktok: "https://www.tiktok.com/search?q=desk%20organizer"
+        }
+    },
+
+    {
+        name: "Study Notebook",
+        description: "A simple notebook for school, work and ideas.",
+        category: "school",
+        icon: "📓",
+        search: "notebook school study journal",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=study%20notebook",
+            lazada: "https://www.lazada.com.ph/catalog/?q=study%20notebook",
+            tiktok: "https://www.tiktok.com/search?q=study%20notebook"
+        }
+    },
+
+    {
+        name: "Mini Bluetooth Speaker",
+        description: "Compact audio for casual listening at home or outdoors.",
+        category: "lifestyle",
+        icon: "🔊",
+        search: "bluetooth speaker portable speaker music",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=bluetooth%20speaker",
+            lazada: "https://www.lazada.com.ph/catalog/?q=bluetooth%20speaker",
+            tiktok: "https://www.tiktok.com/search?q=bluetooth%20speaker"
+        }
+    },
+
+    {
+        name: "Phone Charging Cable",
+        description: "A useful spare cable for everyday charging.",
+        category: "tech",
+        icon: "🔋",
+        search: "phone charging cable USB charger",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=phone%20charging%20cable",
+            lazada: "https://www.lazada.com.ph/catalog/?q=phone%20charging%20cable",
+            tiktok: "https://www.tiktok.com/search?q=phone%20charging%20cable"
+        }
+    },
+
+    {
+        name: "Kitchen Storage Container",
+        description: "Simple storage for keeping kitchen items organized.",
+        category: "home",
+        icon: "🥣",
+        search: "kitchen storage container organizer",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=kitchen%20storage%20container",
+            lazada: "https://www.lazada.com.ph/catalog/?q=kitchen%20storage%20container",
+            tiktok: "https://www.tiktok.com/search?q=kitchen%20storage%20container"
+        }
+    },
+
+    {
+        name: "Water Bottle",
+        description: "A reusable bottle for school, work or everyday trips.",
+        category: "lifestyle",
+        icon: "🥤",
+        search: "water bottle tumbler reusable bottle",
+        links: {
+            shopee: "https://shopee.ph/search?keyword=water%20bottle",
+            lazada: "https://www.lazada.com.ph/catalog/?q=water%20bottle",
+            tiktok: "https://www.tiktok.com/search?q=water%20bottle"
+        }
+    }
+
+];
+
+
+/* ==========================================
+   VISITOR INTEREST MEMORY
+========================================== */
+
+let interests =
+    JSON.parse(localStorage.getItem("mullinPicksInterests")) || {};
+
+
+/* Increase interest in a category */
+
+function learnCategory(category) {
+
+    if (!interests[category]) {
+        interests[category] = 0;
+    }
+
+    interests[category]++;
+
+    localStorage.setItem(
+        "mullinPicksInterests",
+        JSON.stringify(interests)
+    );
+}
+
+
+/* ==========================================
+   SORT PRODUCTS
+========================================== */
+
+function sortProducts(list) {
+
+    return [...list].sort((a, b) => {
+
+        const scoreA = interests[a.category] || 0;
+        const scoreB = interests[b.category] || 0;
+
+        return scoreB - scoreA;
 
     });
 
 }
 
 
-/* =====================================================
-   ENTER KEY SEARCH
-===================================================== */
+/* ==========================================
+   DISPLAY PRODUCTS
+========================================== */
+
+function displayProducts(list, message = "") {
+
+    const grid = document.getElementById("productGrid");
+    const info = document.getElementById("resultsInfo");
+
+    grid.innerHTML = "";
+
+    const sorted = sortProducts(list);
+
+    if (sorted.length === 0) {
+
+        info.textContent =
+            "No matching finds yet. Try another search.";
+
+        return;
+    }
+
+    info.textContent =
+        message || `Showing ${sorted.length} finds.`;
+
+    sorted.forEach(product => {
+
+        const card = document.createElement("div");
+
+        card.className = "product-card";
+
+        card.innerHTML = `
+
+            <div class="product-image">
+                ${product.icon}
+            </div>
+
+            <span class="product-category">
+                ${product.category.toUpperCase()}
+            </span>
+
+            <h3>
+                ${product.name}
+            </h3>
+
+            <p>
+                ${product.description}
+            </p>
+
+            <div class="product-buttons">
+
+                <a
+                    class="shop-button"
+                    href="${product.links.shopee}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-category="${product.category}"
+                >
+                    Shopee
+                </a>
+
+                <a
+                    class="shop-button"
+                    href="${product.links.lazada}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-category="${product.category}"
+                >
+                    Lazada
+                </a>
+
+                <a
+                    class="shop-button"
+                    href="${product.links.tiktok}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-category="${product.category}"
+                >
+                    TikTok Shop
+                </a>
+
+            </div>
+        `;
+
+        grid.appendChild(card);
+
+    });
+
+
+    /* Track clicks */
+
+    document.querySelectorAll(".shop-button").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            learnCategory(button.dataset.category);
+
+        });
+
+    });
+
+}
+
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+const searchForm =
+    document.getElementById("searchForm");
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+searchForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const query =
+        searchInput.value.trim().toLowerCase();
+
+    if (!query) {
+
+        displayProducts(
+            products,
+            "Showing recommended finds."
+        );
+
+        document
+            .getElementById("picks")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
+
+        return;
+    }
+
+
+    const results = products.filter(product => {
+
+        return (
+            product.name.toLowerCase().includes(query) ||
+            product.description.toLowerCase().includes(query) ||
+            product.search.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query)
+        );
+
+    });
+
+
+    displayProducts(
+        results,
+        `Search results for "${query}"`
+    );
+
+
+    document
+        .getElementById("picks")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+});
+
+
+/* ==========================================
+   CATEGORY FILTERS
+========================================== */
 
 document
-.getElementById("searchInput")
-.addEventListener("keypress", function(event) {
+    .querySelectorAll(".category-button")
+    .forEach(button => {
 
-    if (event.key === "Enter") {
+        button.addEventListener("click", function() {
 
-        searchProducts();
-
-    }
-
-});
+            const category =
+                this.dataset.category;
 
 
-/* =====================================================
-   BACK TO TOP BUTTON
-===================================================== */
+            document
+                .querySelectorAll(".category-button")
+                .forEach(btn =>
+                    btn.classList.remove("active")
+                );
 
-window.addEventListener("scroll", function() {
+            this.classList.add("active");
 
-    const button =
-        document.getElementById("topButton");
 
-    if (window.scrollY > 500) {
+            if (category === "all") {
 
-        button.style.display = "block";
+                displayProducts(
+                    products,
+                    "Showing all recommended finds."
+                );
 
-    } else {
+                return;
+            }
 
-        button.style.display = "none";
 
-    }
+            learnCategory(category);
 
-});
+
+            const filtered =
+                products.filter(
+                    product =>
+                        product.category === category
+                );
+
+
+            displayProducts(
+                filtered,
+                `Showing ${category} finds.`
+            );
+
+
+            document
+                .getElementById("picks")
+                .scrollIntoView({
+                    behavior: "smooth"
+                });
+
+        });
+
+    });
+
+
+/* ==========================================
+   START PAGE
+========================================== */
+
+document
+    .querySelector('[data-category="all"]')
+    .classList.add("active");
+
+displayProducts(
+    products,
+    "Showing recommended finds."
+);
 
 </script>
 
-
 </body>
-
 </html>
