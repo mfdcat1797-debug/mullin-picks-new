@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mullin Picks | Everyday Finds</title>
+<title>Mullin Picks | Smart Everyday Finds</title>
+
+<meta name="description"
+content="Mullin Picks discovers useful products, clever gadgets, home items and everyday finds worth checking out.">
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -24,40 +29,40 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #ffffff;
     background:
-        radial-gradient(circle at 80% 10%, rgba(255,166,0,0.18), transparent 25%),
-        radial-gradient(circle at 15% 35%, rgba(0,140,255,0.15), transparent 30%),
-        linear-gradient(135deg, #030711, #081526 50%, #10091b);
+        radial-gradient(circle at 80% 0%, rgba(255,176,0,.15), transparent 30%),
+        radial-gradient(circle at 0% 30%, rgba(0,140,255,.12), transparent 30%),
+        linear-gradient(135deg,#030711,#081526,#10091b);
+
+    color: white;
     min-height: 100vh;
     line-height: 1.6;
 }
 
-
-/* =========================
+/* =====================================================
    NAVIGATION
-========================= */
+===================================================== */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 1000;
-
-    background: rgba(3,7,17,0.94);
-    backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-    padding: 18px 6%;
+    z-index: 999;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 18px 6%;
+
+    background: rgba(3,7,17,.94);
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: 800;
+    font-size: 23px;
+    font-weight: 900;
     letter-spacing: 1px;
 }
 
@@ -65,141 +70,67 @@ nav {
     color: #ffb000;
 }
 
-nav a {
-    color: #ffffff;
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
     text-decoration: none;
-
-    margin-left: 25px;
-
     font-size: 14px;
-
-    transition: 0.3s;
+    transition: .3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #ffb000;
 }
 
-
-/* =========================
-   BUTTONS
-========================= */
-
-.button {
-    display: inline-block;
-
-    background: #ffb000;
-    color: #111827;
-
-    padding: 13px 22px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 30px rgba(255,176,0,0.25);
-}
-
-.secondary-button {
-    display: inline-block;
-
-    color: #ffffff;
-
-    border: 1px solid #475569;
-
-    padding: 12px 22px;
-
-    border-radius: 10px;
-
-    text-decoration: none;
-
-    margin-left: 10px;
-
-    transition: 0.3s;
-}
-
-.secondary-button:hover {
-    border-color: #ffb000;
-    color: #ffb000;
-}
-
-
-/* =========================
+/* =====================================================
    HERO
-========================= */
+===================================================== */
 
 .hero {
-    min-height: 620px;
-
-    padding: 90px 8%;
+    min-height: 650px;
 
     display: flex;
     align-items: center;
 
-    position: relative;
+    padding: 90px 8%;
 
+    position: relative;
     overflow: hidden;
 }
 
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    right: -150px;
-    top: -100px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,174,0,0.2),
-            transparent 70%
-        );
-
-    pointer-events: none;
-}
-
 .hero-content {
-    max-width: 700px;
-
+    max-width: 750px;
     position: relative;
     z-index: 2;
 }
 
-.tag {
+.badge {
     display: inline-block;
-
-    color: #ffb000;
-
-    border: 1px solid rgba(255,176,0,0.4);
-
-    background: rgba(255,176,0,0.08);
 
     padding: 8px 15px;
 
     border-radius: 30px;
 
-    font-size: 13px;
+    color: #ffb000;
 
-    margin-bottom: 20px;
+    border: 1px solid rgba(255,176,0,.4);
+
+    background: rgba(255,176,0,.08);
+
+    font-size: 13px;
+    font-weight: bold;
+
+    margin-bottom: 22px;
 }
 
 .hero h1 {
-    font-size: clamp(48px, 7vw, 82px);
+    font-size: clamp(48px,7vw,85px);
 
-    line-height: 1;
+    line-height: .98;
 
     margin-bottom: 25px;
 }
@@ -218,23 +149,76 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* =====================================================
+   BUTTONS
+===================================================== */
 
-/* =========================
-   SECTIONS
-========================= */
+.button {
+    display: inline-block;
+
+    background: #ffb000;
+
+    color: #111827;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(255,176,0,.3);
+}
+
+.secondary-button {
+    display: inline-block;
+
+    color: white;
+
+    border: 1px solid #475569;
+
+    padding: 13px 23px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    margin-left: 10px;
+
+    transition: .3s;
+}
+
+.secondary-button:hover {
+    color: #ffb000;
+    border-color: #ffb000;
+}
+
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
 
 section {
-    padding: 75px 6%;
+    padding: 80px 6%;
 }
 
 .section-title {
     text-align: center;
 
-    margin-bottom: 45px;
+    max-width: 700px;
+
+    margin: 0 auto 45px;
 }
 
 .section-title h2 {
-    font-size: 38px;
+    font-size: 40px;
 
     margin-bottom: 10px;
 }
@@ -243,10 +227,55 @@ section {
     color: #94a3b8;
 }
 
+/* =====================================================
+   SEARCH
+===================================================== */
 
-/* =========================
-   CATEGORY CARDS
-========================= */
+.search-box {
+    max-width: 650px;
+
+    margin: 0 auto 45px;
+
+    display: flex;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border-radius: 12px 0 0 12px;
+
+    border: 1px solid #334155;
+
+    outline: none;
+
+    background: #0f172a;
+
+    color: white;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 0 22px;
+
+    border: none;
+
+    background: #ffb000;
+
+    color: #111827;
+
+    font-weight: bold;
+
+    border-radius: 0 12px 12px 0;
+
+    cursor: pointer;
+}
+
+/* =====================================================
+   CATEGORIES
+===================================================== */
 
 .categories {
     max-width: 1200px;
@@ -255,188 +284,102 @@ section {
 
     display: grid;
 
-    grid-template-columns: repeat(3,1fr);
-
-    gap: 25px;
-}
-
-.card {
-    background: rgba(15,23,42,0.75);
-
-    border: 1px solid rgba(255,255,255,0.09);
-
-    border-radius: 18px;
-
-    padding: 30px;
-
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-
-    border-color: rgba(255,176,0,0.5);
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,0.3);
-}
-
-.icon {
-    font-size: 38px;
-
-    margin-bottom: 15px;
-}
-
-.card h3 {
-    font-size: 23px;
-
-    margin-bottom: 12px;
-}
-
-.card p {
-    color: #94a3b8;
-}
-
-
-/* =========================
-   FEATURED PRODUCT
-========================= */
-
-.featured {
-    max-width: 1200px;
-
-    margin: auto;
-
-    background:
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(255,176,0,0.15),
-            transparent 35%
-        ),
-        rgba(15,23,42,0.85);
-
-    border: 1px solid rgba(255,176,0,0.35);
-
-    border-radius: 24px;
-
-    padding: 50px;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 50px;
-
-    align-items: center;
-}
-
-.featured-label {
-    color: #ffb000;
-
-    font-weight: bold;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 15px;
-}
-
-.featured h2 {
-    font-size: 42px;
-
-    margin-bottom: 18px;
-}
-
-.featured p {
-    color: #aebbd0;
-
-    margin-bottom: 25px;
-}
-
-.product-visual {
-    min-height: 320px;
-
-    border-radius: 18px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(255,176,0,0.2),
-            transparent 45%
-        ),
-        linear-gradient(
-            145deg,
-            #111827,
-            #020617
-        );
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    font-size: 120px;
-}
-
-
-/* =========================
-   PRODUCT GRID
-========================= */
-
-.product-grid {
-    max-width: 1200px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap: 22px;
 }
 
-.product-card {
-    background: rgba(15,23,42,0.78);
+.category {
+    padding: 30px;
 
-    border: 1px solid rgba(255,255,255,0.09);
+    background: rgba(15,23,42,.75);
+
+    border:
+        1px solid rgba(255,255,255,.08);
 
     border-radius: 18px;
 
-    padding: 22px;
-
-    transition: 0.3s;
-
-    display: flex;
-
-    flex-direction: column;
+    transition: .3s;
 }
 
-.product-card:hover {
+.category:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255,176,0,.5);
+}
+
+.category-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.category h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.category p {
+    color: #94a3b8;
+}
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap: 22px;
+}
+
+.product {
+    background: rgba(15,23,42,.8);
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    transition: .3s;
+
+    overflow: hidden;
+}
+
+.product:hover {
     transform: translateY(-7px);
 
-    border-color: rgba(255,176,0,0.5);
+    border-color: rgba(255,176,0,.5);
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,0.3);
+        0 15px 40px rgba(0,0,0,.3);
 }
 
 .product-image {
-    height: 180px;
-
-    border-radius: 14px;
+    height: 190px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
+
+    border-radius: 14px;
 
     background:
         radial-gradient(
             circle,
-            rgba(255,176,0,0.2),
+            rgba(255,176,0,.22),
             transparent 55%
         ),
         linear-gradient(
@@ -447,87 +390,113 @@ section {
 
     font-size: 75px;
 
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.product-badge {
-    display: inline-block;
-
-    width: fit-content;
-
-    color: #ffb000;
-
-    background: rgba(255,176,0,0.10);
-
-    border: 1px solid rgba(255,176,0,0.25);
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 11px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
-}
-
-.product-card h3 {
+.product h3 {
     font-size: 20px;
 
     margin-bottom: 10px;
 }
 
-.rating {
-    color: #ffb000;
-
-    font-size: 13px;
-
-    margin-bottom: 10px;
-}
-
-.rating span {
+.product p {
     color: #94a3b8;
 
-    margin-left: 5px;
-}
-
-.product-card p {
-    color: #94a3b8;
-
-    margin-bottom: 20px;
+    font-size: 14px;
 
     min-height: 70px;
+
+    margin-bottom: 20px;
 }
 
-.product-bottom {
-    margin-top: auto;
+.product .button {
+    font-size: 13px;
+
+    padding: 11px 15px;
+}
+
+/* =====================================================
+   FEATURED
+===================================================== */
+
+.featured {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+
+    padding: 45px;
+
+    border-radius: 25px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(255,176,0,.18),
+            transparent 35%
+        ),
+        rgba(15,23,42,.85);
+
+    border:
+        1px solid rgba(255,176,0,.3);
+}
+
+.featured-label {
+    color: #ffb000;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.featured h2 {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.featured p {
+    color: #aebbd0;
+
+    margin-bottom: 25px;
+}
+
+.featured-image {
+    min-height: 320px;
+
+    border-radius: 20px;
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    gap: 12px;
+    font-size: 130px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,176,0,.2),
+            transparent 50%
+        ),
+        linear-gradient(
+            145deg,
+            #111827,
+            #020617
+        );
 }
 
-.price {
-    color: #ffffff;
-
-    font-size: 14px;
-}
-
-.product-card .button {
-    font-size: 14px;
-
-    padding: 11px 17px;
-
-    text-align: center;
-}
-
-
-/* =========================
-   BENEFITS
-========================= */
+/* =====================================================
+   WHY MULLIN PICKS
+===================================================== */
 
 .benefits {
     max-width: 1100px;
@@ -536,7 +505,8 @@ section {
 
     display: grid;
 
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns:
+        repeat(4,1fr);
 
     gap: 15px;
 }
@@ -546,17 +516,16 @@ section {
 
     padding: 25px 15px;
 
-    background: rgba(15,23,42,0.6);
+    background:
+        rgba(15,23,42,.6);
 
     border-radius: 15px;
-
-    border: 1px solid rgba(255,255,255,0.05);
 }
 
 .benefit strong {
     display: block;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 .benefit span {
@@ -565,103 +534,176 @@ section {
     font-size: 14px;
 }
 
-
-/* =========================
+/* =====================================================
    ABOUT
-========================= */
+===================================================== */
 
 .about {
-    max-width: 1100px;
+    max-width: 900px;
 
     margin: auto;
 
     text-align: center;
 
-    background: rgba(15,23,42,0.7);
-
-    border: 1px solid rgba(255,255,255,0.08);
-
-    border-radius: 20px;
-
     padding: 50px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(15,23,42,.7);
+
+    border:
+        1px solid rgba(255,255,255,.08);
 }
 
 .about h2 {
-    font-size: 36px;
+    font-size: 38px;
 
     margin-bottom: 15px;
 }
 
 .about p {
     color: #aebbd0;
-
-    max-width: 750px;
-
-    margin: auto;
 }
 
+/* =====================================================
+   DISCLOSURE
+===================================================== */
 
-/* =========================
+.disclosure {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    background: rgba(255,176,0,.08);
+
+    border:
+        1px solid rgba(255,176,0,.25);
+
+    color: #cbd5e1;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
     padding: 50px 6%;
 
     text-align: center;
 
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top:
+        1px solid rgba(255,255,255,.08);
 
     color: #64748b;
 }
 
 footer strong {
-    color: #ffffff;
+    color: white;
 }
 
+.footer-links {
+    margin: 15px 0;
+}
 
-/* =========================
-   TABLET
-========================= */
+.footer-links a {
+    color: #94a3b8;
 
-@media (max-width: 1050px) {
+    text-decoration: none;
 
-    .product-grid {
-        grid-template-columns: repeat(2,1fr);
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    color: #ffb000;
+}
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+#topButton {
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #ffb000;
+
+    color: #111827;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 1000;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px) {
+
+    .products {
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .benefits {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
+
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 800px) {
+@media(max-width:700px) {
 
     nav {
         padding: 15px 5%;
     }
 
-    nav div:last-child {
+    .nav-links {
         display: none;
     }
 
     .hero {
         min-height: 550px;
 
-        padding: 70px 7%;
+        padding:
+            70px 7%;
     }
 
     .hero p {
         font-size: 17px;
     }
 
+    .secondary-button {
+        margin-left: 0;
+
+        margin-top: 12px;
+    }
+
     .categories,
-    .product-grid,
+    .products,
     .benefits,
     .featured {
         grid-template-columns: 1fr;
@@ -675,34 +717,37 @@ footer strong {
         font-size: 32px;
     }
 
-    .product-visual {
-        min-height: 230px;
+    .featured-image {
+        min-height: 240px;
 
         font-size: 90px;
     }
 
     section {
-        padding: 55px 5%;
+        padding: 60px 5%;
     }
 
-    .secondary-button {
-        margin-left: 0;
+    .about {
+        padding: 30px 20px;
+    }
 
-        margin-top: 12px;
+    .search-box input {
+        font-size: 14px;
     }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
@@ -710,56 +755,70 @@ footer strong {
         🛍️ MULLIN <span>PICKS</span>
     </div>
 
-    <div>
+    <div class="nav-links">
 
         <a href="#home">Home</a>
 
-        <a href="#categories">Categories</a>
+        <a href="#categories">
+            Categories
+        </a>
 
-        <a href="#featured">Featured</a>
+        <a href="#picks">
+            Picks
+        </a>
 
-        <a href="#picks">Picks</a>
-
-        <a href="#about">About</a>
+        <a href="#about">
+            About
+        </a>
 
     </div>
 
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      HERO
-========================= -->
+===================================================== -->
 
-<header class="hero" id="home">
+<header
+    class="hero"
+    id="home"
+>
 
     <div class="hero-content">
 
-        <div class="tag">
+        <div class="badge">
             ⭐ EVERYDAY FINDS
         </div>
 
         <h1>
-            Discover things<br>
+
+            Discover things
+
+            <br>
+
             <span>worth finding.</span>
+
         </h1>
 
         <p>
-            Useful products, interesting finds,
-            and everyday items that can make
-            life a little easier.
+
+            Useful products, clever gadgets,
+            home upgrades and interesting
+            everyday finds — all in one place.
+
         </p>
 
         <a
+            href="#picks"
             class="button"
-            href="#categories"
         >
-            Explore Finds →
+            Explore Picks →
         </a>
 
         <a
-            class="secondary-button"
             href="#featured"
+            class="secondary-button"
         >
             Featured Pick
         </a>
@@ -769,11 +828,49 @@ footer strong {
 </header>
 
 
-<!-- =========================
-     CATEGORIES
-========================= -->
+<!-- =====================================================
+     SEARCH
+===================================================== -->
 
-<section id="categories">
+<section>
+
+    <div class="section-title">
+
+        <h2>
+            🔎 Find Something
+        </h2>
+
+        <p>
+            Search the Mullin Picks collection.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search products..."
+        >
+
+        <button onclick="searchProducts()">
+            Search
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    id="categories"
+>
 
     <div class="section-title">
 
@@ -782,7 +879,7 @@ footer strong {
         </h2>
 
         <p>
-            Find something useful for everyday life.
+            Discover useful things for everyday life.
         </p>
 
     </div>
@@ -791,9 +888,9 @@ footer strong {
     <div class="categories">
 
 
-        <div class="card">
+        <div class="category">
 
-            <div class="icon">
+            <div class="category-icon">
                 🛍️
             </div>
 
@@ -802,34 +899,34 @@ footer strong {
             </h3>
 
             <p>
-                Useful items, small upgrades,
-                and practical things for daily life.
+                Practical products and
+                clever little upgrades.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="category">
 
-            <div class="icon">
+            <div class="category-icon">
                 🏠
             </div>
 
             <h3>
-                Home & Everyday
+                Home
             </h3>
 
             <p>
-                Ideas for your home, routines,
-                comfort, and organization.
+                Useful items for your
+                home and workspace.
             </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="category">
 
-            <div class="icon">
+            <div class="category-icon">
                 🎮
             </div>
 
@@ -838,8 +935,8 @@ footer strong {
             </h3>
 
             <p>
-                Interesting finds for hobbies,
-                entertainment, and lifestyle.
+                Interesting products for
+                hobbies and entertainment.
             </p>
 
         </div>
@@ -850,11 +947,13 @@ footer strong {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FEATURED PRODUCT
-========================= -->
+===================================================== -->
 
-<section id="featured">
+<section
+    id="featured"
+>
 
     <div class="featured">
 
@@ -862,18 +961,108 @@ footer strong {
         <div>
 
             <div class="featured-label">
-                ⭐ FEATURED EVERYDAY FIND
+
+                ⭐ FEATURED PICK
+
             </div>
 
+
             <h2>
+
                 Adjustable Phone Stand
+
             </h2>
 
+
             <p>
-                A simple accessory for keeping
-                your phone upright while watching
-                videos, making calls, or working
-                at your desk.
+
+                A simple desk accessory
+                that keeps your phone upright
+                while watching videos,
+                working or making calls.
+
+            </p>
+
+
+            <!--
+            IMPORTANT:
+
+            Replace this URL later with
+            YOUR approved affiliate link.
+            -->
+
+            <a
+                href="https://www.amazon.com/s?k=adjustable+phone+stand"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button"
+            >
+
+                View Product →
+
+            </a>
+
+        </div>
+
+
+        <div class="featured-image">
+
+            📱
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MULLIN PICKS
+===================================================== -->
+
+<section
+    id="picks"
+>
+
+    <div class="section-title">
+
+        <h2>
+            🔥 Mullin Picks
+        </h2>
+
+        <p>
+            Products worth checking out.
+        </p>
+
+    </div>
+
+
+    <div
+        class="products"
+        id="productGrid"
+    >
+
+
+        <!-- PRODUCT 1 -->
+
+        <div
+            class="product"
+            data-name="phone stand"
+        >
+
+            <div class="product-image">
+                📱
+            </div>
+
+            <h3>
+                Adjustable Phone Stand
+            </h3>
+
+            <p>
+                Keep your phone upright
+                while watching videos
+                or working.
             </p>
 
             <a
@@ -888,219 +1077,98 @@ footer strong {
         </div>
 
 
-        <div class="product-visual">
-            📱
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     MULLIN PICKS
-========================= -->
-
-<section id="picks">
-
-    <div class="section-title">
-
-        <h2>
-            🔥 Mullin Picks
-        </h2>
-
-        <p>
-            Some useful finds worth checking out.
-        </p>
-
-    </div>
-
-
-    <div class="product-grid">
-
-
-        <!-- PRODUCT 1 -->
-
-        <div class="product-card">
-
-            <div class="product-image">
-                📱
-            </div>
-
-            <div class="product-badge">
-                ⭐ MULLIN PICK
-            </div>
-
-            <h3>
-                Adjustable Phone Stand
-            </h3>
-
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-                <span>Popular desk accessory</span>
-            </div>
-
-            <p>
-                Keep your phone upright while
-                watching videos, making calls,
-                or working at your desk.
-            </p>
-
-            <div class="product-bottom">
-
-                <strong class="price">
-                    Check Latest Price
-                </strong>
-
-                <a
-                    class="button"
-                    href="https://www.amazon.com/s?k=adjustable+phone+stand"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Product →
-                </a>
-
-            </div>
-
-        </div>
-
-
         <!-- PRODUCT 2 -->
 
-        <div class="product-card">
+        <div
+            class="product"
+            data-name="led desk lamp light"
+        >
 
             <div class="product-image">
                 💡
-            </div>
-
-            <div class="product-badge">
-                ⭐ MULLIN PICK
             </div>
 
             <h3>
                 LED Desk Light
             </h3>
 
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-                <span>Workspace favorite</span>
-            </div>
-
             <p>
-                A simple lighting upgrade for
-                your desk or workspace.
+                A simple lighting upgrade
+                for your desk or workspace.
             </p>
 
-            <div class="product-bottom">
-
-                <strong class="price">
-                    Check Latest Price
-                </strong>
-
-                <a
-                    class="button"
-                    href="https://www.amazon.com/s?k=LED+desk+lamp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Product →
-                </a>
-
-            </div>
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=LED+desk+lamp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Product →
+            </a>
 
         </div>
 
 
         <!-- PRODUCT 3 -->
 
-        <div class="product-card">
+        <div
+            class="product"
+            data-name="headphone stand"
+        >
 
             <div class="product-image">
                 🎧
-            </div>
-
-            <div class="product-badge">
-                ⭐ MULLIN PICK
             </div>
 
             <h3>
                 Headphone Stand
             </h3>
 
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-                <span>Desk organization</span>
-            </div>
-
             <p>
-                A convenient way to keep
-                headphones organized on your desk.
+                Keep your headphones
+                organized on your desk.
             </p>
 
-            <div class="product-bottom">
-
-                <strong class="price">
-                    Check Latest Price
-                </strong>
-
-                <a
-                    class="button"
-                    href="https://www.amazon.com/s?k=headphone+stand"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Product →
-                </a>
-
-            </div>
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=headphone+stand"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Product →
+            </a>
 
         </div>
 
 
         <!-- PRODUCT 4 -->
 
-        <div class="product-card">
+        <div
+            class="product"
+            data-name="usb hub"
+        >
 
             <div class="product-image">
                 🔌
-            </div>
-
-            <div class="product-badge">
-                ⭐ MULLIN PICK
             </div>
 
             <h3>
                 USB Hub
             </h3>
 
-            <div class="rating">
-                ⭐⭐⭐⭐⭐
-                <span>Useful computer accessory</span>
-            </div>
-
             <p>
-                Add extra USB ports when you
-                need more connections.
+                Add extra USB connections
+                when you need them.
             </p>
 
-            <div class="product-bottom">
-
-                <strong class="price">
-                    Check Latest Price
-                </strong>
-
-                <a
-                    class="button"
-                    href="https://www.amazon.com/s?k=USB+hub"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Product →
-                </a>
-
-            </div>
+            <a
+                class="button"
+                href="https://www.amazon.com/s?k=USB+hub"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Product →
+            </a>
 
         </div>
 
@@ -1110,11 +1178,20 @@ footer strong {
 </section>
 
 
-<!-- =========================
-     BENEFITS
-========================= -->
+<!-- =====================================================
+     WHY MULLIN PICKS
+===================================================== -->
 
 <section>
+
+    <div class="section-title">
+
+        <h2>
+            Why Mullin Picks?
+        </h2>
+
+    </div>
+
 
     <div class="benefits">
 
@@ -1126,7 +1203,8 @@ footer strong {
             </strong>
 
             <span>
-                Interesting products worth exploring.
+                Interesting products
+                worth exploring.
             </span>
 
         </div>
@@ -1139,7 +1217,8 @@ footer strong {
             </strong>
 
             <span>
-                Discover ideas without endless searching.
+                Discover products without
+                endless searching.
             </span>
 
         </div>
@@ -1152,7 +1231,7 @@ footer strong {
             </strong>
 
             <span>
-                Products chosen for everyday usefulness.
+                Focused on everyday usefulness.
             </span>
 
         </div>
@@ -1176,11 +1255,13 @@ footer strong {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      ABOUT
-========================= -->
+===================================================== -->
 
-<section id="about">
+<section
+    id="about"
+>
 
     <div class="about">
 
@@ -1192,13 +1273,13 @@ footer strong {
 
             Mullin Picks is a product-discovery
             website focused on useful everyday
-            items, interesting finds, and products
-            worth checking out.
+            items, interesting gadgets and
+            products worth checking out.
 
             <br><br>
 
-            We're building this site one find
-            at a time.
+            We're building Mullin Picks
+            one great find at a time.
 
         </p>
 
@@ -1207,9 +1288,43 @@ footer strong {
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
+     AFFILIATE DISCLOSURE
+===================================================== -->
+
+<section>
+
+    <div class="disclosure">
+
+        <strong>
+            Affiliate Disclosure:
+        </strong>
+
+        Some links on Mullin Picks may be
+        affiliate links. If you make a qualifying
+        purchase through an affiliate link,
+        Mullin Picks may earn a commission
+        at no additional cost to you.
+
+        <br><br>
+
+        <strong>
+            Amazon Associate Disclosure:
+        </strong>
+
+        If Mullin Picks participates in the
+        Amazon Associates Program, the required
+        Amazon Associate disclosure will appear
+        here.
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
@@ -1219,13 +1334,135 @@ footer strong {
         </strong>
     </p>
 
+
+    <div class="footer-links">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#categories">
+            Categories
+        </a>
+
+        <a href="#picks">
+            Picks
+        </a>
+
+        <a href="#about">
+            About
+        </a>
+
+    </div>
+
+
     <p>
-        © 2026 Mullin Picks —
-        All rights reserved.
+        © 2026 Mullin Picks
     </p>
 
 </footer>
 
 
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button
+    id="topButton"
+    onclick="window.scrollTo({top:0,behavior:'smooth'})"
+>
+    ↑
+</button>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   PRODUCT SEARCH
+===================================================== */
+
+function searchProducts() {
+
+    const input =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const products =
+        document.querySelectorAll(".product");
+
+    products.forEach(function(product) {
+
+        const name =
+            product
+            .getAttribute("data-name")
+            .toLowerCase();
+
+        if (
+            input === "" ||
+            name.includes(input)
+        ) {
+
+            product.style.display = "block";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =====================================================
+   ENTER KEY SEARCH
+===================================================== */
+
+document
+.getElementById("searchInput")
+.addEventListener("keypress", function(event) {
+
+    if (event.key === "Enter") {
+
+        searchProducts();
+
+    }
+
+});
+
+
+/* =====================================================
+   BACK TO TOP BUTTON
+===================================================== */
+
+window.addEventListener("scroll", function() {
+
+    const button =
+        document.getElementById("topButton");
+
+    if (window.scrollY > 500) {
+
+        button.style.display = "block";
+
+    } else {
+
+        button.style.display = "none";
+
+    }
+
+});
+
+</script>
+
+
 </body>
+
 </html>
